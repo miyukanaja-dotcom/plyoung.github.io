@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SB - PL注目若手選手紹介 | EURO NEXT-GEN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Premiere League <span class="highlight">NEXT-GEN</span></h1>
+            <p class="subtitle">次世代を担うPLの至宝たち</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="gk.html">GK</a></li>
+                <li><a href="cb.html">CB</a></li>
+                <li><a href="sb.html"class="active">SB</a></li>
+                <li><a href="cm.html">CM</a></li>
+                <li><a href="wg.html">WG</a></li>
+                <li><a href="cf.html">CF</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h2>SIDE BACK (SB)</h2>
+            <p>圧倒的なフィジカルによる対人守備だけでなく、攻撃の起点となる高精度な展開力を備えた次世代のディフェンスリーダー</p>
+        </section>
+
+        <div class="player-grid">
+
+           <!--1人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2110.jpg" alt="選手名">
+        <span class="position-badge sb">SB</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">21歳</span>
+            <span class="nation">国籍: イングランド</span>
+            <span class="money">市場価値: 50m€</span>
+        </div>
+        <h3 class="player-name">Nico O'Reilly</h3>
+        <p class="club">所属:  Manchester City / 身長: 193cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart1"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">テクニック</span>
+            <span class="tag">戦術理解度</span>
+        </div>
+        <hr>
+        <p class="description">
+            マンチェスター・シティ所属のイングランド代表MF。193cmの体格を活かした力強さと、抜群のテクニックを併せ持つ万能型。複数ポジションを高水準でこなし、名門の未来を担う大器として大きな期待を集めている。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx1 = document.getElementById('playerChart1').getContext('2d');
+    new Chart(ctx1, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['守備力', 'フィジカル', 'スピード', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [65, 65, 70, 85, 85], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+<!--2人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2111.jpg" alt="選手名">
+        <span class="position-badge sb">SB</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">19歳</span>
+            <span class="nation">国籍: イングランド</span>
+            <span class="money">市場価値: 35m€</span>
+        </div>
+        <h3 class="player-name">Myles Lewis-Skelly</h3>
+        <p class="club">所属: Arsenal/ 身長: 178cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart2"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">戦術理解度</span>
+            <span class="tag">推進力</span>
+        </div>
+        <hr>
+        <p class="description">
+            アーセナルの下部組織出身で、イングランド世代別代表の俊才。驚異的なボールキープ力と推進力が武器で、元々CMだったがチームのSB不足でSBにコンバート。名門の未来を担う、戦術眼に優れた万能型SB。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx2 = document.getElementById('playerChart2').getContext('2d');
+    new Chart(ctx2, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['守備力', 'フィジカル', 'スピード', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [70, 75, 60, 88, 88], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+<!--3人目-->
+<article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2112.jpg" alt="選手名">
+        <span class="position-badge sb">SB</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">21歳</span>
+            <span class="nation">国籍: イングランド</span>
+            <span class="money">市場価値: 35m€</span>
+        </div>
+        <h3 class="player-name">Lewis Hall</h3>
+        <p class="club">所属: Newcastle United/ 身長: 179cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart3"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">超攻撃的</span>
+            <span class="tag">戦術理解度</span>
+        </div>
+        <hr>
+        <p class="description">
+            ニューカッスル所属のイングランド代表DF。MF出身ならではの高い技術と攻撃センスを誇る左サイドバックです。複数ポジションをこなす汎用性と高精度なキックを武器に、イングランドの未来を担う左サイドの職人。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx3 = document.getElementById('playerChart3').getContext('2d');
+    new Chart(ctx3, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['守備力', 'フィジカル', 'スピード', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [65, 60, 80, 70, 75], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--4人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2113.jpg" alt="選手名">
+        <span class="position-badge sb">SB</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">20歳</span>
+            <span class="nation">国籍: オランダ</span>
+            <span class="money">市場価値: 35m€</span>
+        </div>
+        <h3 class="player-name">Jorrel Hato</h3>
+        <p class="club">所属: Chelsea/ 身長: 182cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart4"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">ビルドアップ</span>
+            <span class="tag">スピード</span>
+        </div>
+        <hr>
+        <p class="description">
+            チェルシー所属のオランダ代表DF。CBと左SBを高水準でこなす万能型で、高精度な左足のパスと卓越した守備センスが武器。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx4 = document.getElementById('playerChart4').getContext('2d');
+    new Chart(ctx4, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['守備力', 'フィジカル', 'スピード', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [65, 65, 88, 60, 65], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--5人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2114.jpg" alt="選手名">
+        <span class="position-badge sb">SB</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">21歳</span>
+            <span class="nation">国籍: セネガル</span>
+            <span class="money">市場価値: 28m€</span>
+        </div>
+        <h3 class="player-name">El Hadji Malick Diouf </h3>
+        <p class="club">所属: West Ham United/ 身長: 183cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart5"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">攻撃性能</span>
+            <span class="tag">運動量</span>
+        </div>
+        <hr>
+        <p class="description">
+            ハマーズ所属するセネガル代表DF。爆発的なスピードを活かした左サイドからの突破力と攻撃センスが武器。驚異的な運動量で攻守に輝きを放ち、欧州のメガクラブからも熱い視線が注がれる新星。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx5 = document.getElementById('playerChart5').getContext('2d');
+    new Chart(ctx5, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['守備力', 'フィジカル', 'スピード', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [75, 75, 85, 60, 55], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--6人目-->
+<article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2115.jpg" alt="選手名">
+        <span class="position-badge sb">SB</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">23歳</span>
+            <span class="nation">国籍: イングランド</span>
+            <span class="money">市場価値: 40m€</span>
+        </div>
+        <h3 class="player-name">Tino Livramento</h3>
+        <p class="club">所属: Newcastle United/ 身長: 182cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart6"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">機動力</span>
+            <span class="tag">左右両サイド</span>
+        </div>
+        <hr>
+        <p class="description">
+            ニューカッスル所属のイングランド代表DF。爆発的なスピードを活かした一対一の堅実な守備と、鋭い攻撃参加が武器の現代型サイドバックです。左右どちらのサイドも高水準でこなし、今後の代表や欧州を担う気鋭の新星。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx6 = document.getElementById('playerChart6').getContext('2d');
+    new Chart(ctx6, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['守備力', 'フィジカル', 'スピード', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [70, 65, 80, 70, 70], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--7人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2116.jpg" alt="選手名">
+        <span class="position-badge sb">SB</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">21歳</span>
+            <span class="nation">国籍: イタリア</span>
+            <span class="money">市場価値: 40m€</span>
+        </div>
+        <h3 class="player-name">Micharl Kayode</h3>
+        <p class="club">所属: Brentford/ 身長: 182cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart7"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">身体能力</span>
+            <span class="tag">ロングスロー</span>
+        </div>
+        <hr>
+        <p class="description">
+            ブレントフォード所属のイタリア世代別代表DF。爆発的なスピードと対人の強さを誇る気鋭の右サイドバック。高い守備力と攻撃の推進力を武器に大ブレイクを果たし、プレミアリーグの最優秀若手賞にもノミネートされるなど世界が注目する至宝。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx7 = document.getElementById('playerChart7').getContext('2d');
+    new Chart(ctx7, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['守備力', 'フィジカル', 'スピード', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [70, 65, 80, 60, 55], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--8人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2117.jpg" alt="選手名">
+        <span class="position-badge sb">SB</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">23歳</span>
+            <span class="nation">国籍: フランス</span>
+            <span class="money">市場価値: 35m€</span>
+        </div>
+        <h3 class="player-name">Malo Gusto </h3>
+        <p class="club">所属: Chelsea/ 身長: 179cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart8"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">守備強度</span>
+            <span class="tag">高精度クロス</span>
+        </div>
+        <hr>
+        <p class="description">
+            チェルシーに所属するフランス代表DF。爆発的なスピードを活かしたサイドの突破力と、一対一の堅実な守備を兼ね備えた現代型右サイドバック。高いクロス精度も武器に、名門の右サイドに君臨する不動の若き実力者。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx8 = document.getElementById('playerChart8').getContext('2d');
+    new Chart(ctx8, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['守備力', 'フィジカル', 'スピード', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [65, 60, 75, 75, 80], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+          
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EURO NEXT-GEN. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

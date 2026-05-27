@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WG - PL注目若手選手紹介 | EURO NEXT-GEN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Premiere League<span class="highlight">NEXT-GEN</span></h1>
+            <p class="subtitle">次世代を担うPLの至宝たち</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="gk.html">GK</a></li>
+                <li><a href="cb.html">CB</a></li>
+                <li><a href="sb.html">SB</a></li>
+                <li><a href="cm.html">CM</a></li>
+                <li><a href="wg.html"class="active">WG</a></li>
+                <li><a href="cf.html">CF</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h2>WINGER (WG)</h2>
+            <p>圧倒的なフィジカルによる対人守備だけでなく、攻撃の起点となる高精度な展開力を備えた次世代のディフェンスリーダー</p>
+        </section>
+
+        <div class="player-grid">
+
+          
+<!--1人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2130.jpg" alt="選手名">
+        <span class="position-badge wg">WG</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">23歳</span>
+            <span class="nation">国籍: ベルギー</span>
+            <span class="money">市場価値: 65m€</span>
+        </div>
+        <h3 class="player-name">Jeremy Doku </h3>
+        <p class="club">所属:  Manchester City/ 身長: 171cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart1"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">ドリブル</span>
+            <span class="tag">スピード</span>
+        </div>
+        <hr>
+        <p class="description">
+            マンチェスター・シティに所属するベルギー代表FW。世界屈指の爆発的なスピードと異次元のドリブル技術を誇り、一対一で圧倒的な破壊力を発揮。名将ペップの元で進化を続ける、新世代の超攻撃型ウイング。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx1 = document.getElementById('playerChart1').getContext('2d');
+    new Chart(ctx1, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['スピード', 'チャンスメイク', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [90, 80, 75, 95, 65], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+<!--6人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2131.jpg" alt="選手名">
+        <span class="position-badge wg">WG</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">19歳</span>
+            <span class="nation">国籍: ブラジル</span>
+            <span class="money">市場価値: 80m€</span>
+        </div>
+        <h3 class="player-name">Estevao</h3>
+        <p class="club">所属:  Chelsea/ 身長: 176cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart6"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">ドリブル</span>
+            <span class="tag">創造性</span>
+        </div>
+        <hr>
+        <p class="description">
+            チェルシー所属のブラジル代表FW。天才的なドリブルと、強烈な左足のキックを武器とする超大物。10代にして欧州最高峰の舞台で輝きを放つ、世界最注目の神童ウイング。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx6 = document.getElementById('playerChart6').getContext('2d');
+    new Chart(ctx6, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['スピード', 'チャンスメイク', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [85, 70, 80, 85, 70], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+<!--2人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2132.jpg" alt="選手名">
+        <span class="position-badge wg">WG</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">19歳</span>
+            <span class="nation">国籍: ブラジル</span>
+            <span class="money">市場価値: 40m€</span>
+        </div>
+        <h3 class="player-name">Rayan</h3>
+        <p class="club">所属: AFC Bournemoth/ 身長: 186cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart2"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">得点力</span>
+            <span class="tag">ドリブル</span>
+        </div>
+        <hr>
+        <p class="description">
+            ボーンマス所属のブラジル代表FW。185cm超の恵まれたフィジカルと卓越したドリブル、そして強烈な左足のシュートを武器とする大型ウイング。19歳でプレミアへ上陸し、瞬く間に頭角を現した至宝のレフティー。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx2 = document.getElementById('playerChart2').getContext('2d');
+    new Chart(ctx2, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['スピード', 'チャンスメイク', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [85, 75, 80, 85, 60], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+<!--3人目-->
+<article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2133.jpg" alt="選手名">
+        <span class="position-badge wg">WG</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">17歳</span>
+            <span class="nation">国籍: イングランド</span>
+            <span class="money">市場価値: 20m€</span>
+        </div>
+        <h3 class="player-name">Rio Ngumoha</h3>
+        <p class="club">所属:  Liverpool / 身長: 170cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart3"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">ドリブル</span>
+        </div>
+        <hr>
+        <p class="description">
+            リヴァプールに所属するイングランド世代別代表FW。チェルシーから移籍した、世代屈指の天才ウイング。爆発的なキレを誇るドリブルと高い創造性を武器に、近未来のサッカー界を背負って立つと期待される至宝。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx3 = document.getElementById('playerChart3').getContext('2d');
+    new Chart(ctx3, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['スピード', 'チャンスメイク', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [80, 70, 70, 85, 60], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--4人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2134.jpg" alt="選手名">
+        <span class="position-badge wg">WG</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">21歳</span>
+            <span class="nation">国籍: ガンビア</span>
+            <span class="money">市場価値: 40m€</span>
+        </div>
+        <h3 class="player-name">Yankuba Minteh</h3>
+        <p class="club">所属: Brighton&Hove Albion/ 身長: 180cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart4"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">スピード</span>
+        </div>
+        <hr>
+        <p class="description">
+            ブライトン所属のガンビア代表FW。爆発的な快速を活かした右サイドからの突破力と、強烈な左足のシュートが武器の韋駄天アタッカー。高い守備強度も兼ね備え、プレミアの舞台で鮮烈な輝きを放つ新星ウイング。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx4 = document.getElementById('playerChart4').getContext('2d');
+    new Chart(ctx4, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['スピード', 'チャンスメイク', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [98, 70, 65, 78, 60], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--5人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2135.jpg" alt="選手名">
+        <span class="position-badge wg">WG</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">22歳</span>
+            <span class="nation">国籍: イングランド</span>
+            <span class="money">市場価値: 30m€</span>
+        </div>
+        <h3 class="player-name">Omari Hutchinson</h3>
+        <p class="club">所属: Nottingham Forest/ 身長: 174cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart5"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">創造性</span>
+        </div>
+        <hr>
+        <p class="description">
+            ノッティンガム・フォレスト所属の俊英アタッカー。爆発的なキレを持つドリブルと強烈な左足のキックを武器に、右サイドから次々と決定機を演出。複数ポジションをこなす万能性も魅力な、前線の若き実力者。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx5 = document.getElementById('playerChart5').getContext('2d');
+    new Chart(ctx5, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['スピード', 'チャンスメイク', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [75, 75, 70, 75, 60], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EURO NEXT-GEN. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

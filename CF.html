@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF - PL注目若手選手紹介 | EURO NEXT-GEN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <h1>Premiere League<span class="highlight">NEXT-GEN</span></h1>
+            <p class="subtitle">次世代を担うPLの至宝たち</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="gk.html">GK</a></li>
+                <li><a href="cb.html">CB</a></li>
+                <li><a href="sb.html">SB</a></li>
+                <li><a href="cm.html">CM</a></li>
+                <li><a href="wg.html">WG</a></li>
+                <li><a href="cf.html"class="active">CF</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h2>CENTER FOWARD(CF)</h2>
+            <p>圧倒的なフィジカルによる対人守備だけでなく、攻撃の起点となる高精度な展開力を備えた次世代のディフェンスリーダー</p>
+        </section>
+
+        <div class="player-grid">
+<!--10人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2136.jpg" alt="選手名">
+        <span class="position-badge cf">CF</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">19歳</span>
+            <span class="nation">国籍: フランス</span>
+            <span class="money">市場価値: 40m€</span>
+        </div>
+        <h3 class="player-name">Junior Kroupi</h3>
+        <p class="club">所属: AFC Bournemoth/ 身長: 179cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart10"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">スピード</span>
+            <span class="tag">得点力</span>
+        </div>
+        <hr>
+        <p class="description">
+            ボーンマスに所属するフランス世代別代表攻撃的MF。爆発的なスピードと高い得点感覚を武器に、10代でプレミアリーグにステップアップして大ブレイク。ビッグクラブが熱視線を送る、フランス前線の未来を担う超新星。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx10 = document.getElementById('playerChart10').getContext('2d');
+    new Chart(ctx10, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['空中戦', 'フィジカル', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [65, 60, 85, 75, 75], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+<!--2人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2137.jpg" alt="選手名">
+        <span class="position-badge cf">CF</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">22歳</span>
+            <span class="nation">国籍: スロベニア</span>
+            <span class="money">市場価値: 50m€</span>
+        </div>
+        <h3 class="player-name">Benjamin Sesko</h3>
+        <p class="club">所属: Manchester United/ 身長: 195cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart2"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">得点パターン</span>
+            <span class="tag">空中戦</span>
+        </div>
+        <hr>
+        <p class="description">
+            マンチェスター・ユナイテッド所属のスロベニア代表FW。195cmの巨躯と圧倒的なスピードを武器にゴールを量産する怪物ストライカー。空中戦の強さと高い足元の技術を兼ね備え、世界中が恐れる新世代の大型重戦車。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx2 = document.getElementById('playerChart2').getContext('2d');
+    new Chart(ctx2, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['空中戦', 'フィジカル', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [88, 80, 85, 65, 60], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+<!--3人目-->
+<article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2138.jpg" alt="選手名">
+        <span class="position-badge cf">CF</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">23歳</span>
+            <span class="nation">国籍: フランス</span>
+            <span class="money">市場価値: 90m€</span>
+        </div>
+        <h3 class="player-name">Hugo Ekitike</h3>
+        <p class="club">所属: Liverpool/ 身長: 190m</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart3"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">リンクマン</span>
+            <span class="tag">ボールキャリー</span>
+        </div>
+        <hr>
+        <p class="description">
+            リヴァプール所属のフランス人FW。190cmの体躯を活かした高いキープ力と、抜群のスピードを兼ね備えた万能型ストライカー。フランクフルトでの大ブレイクを経て、プレミアでもその非凡な攻撃センスを証明している。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx3 = document.getElementById('playerChart3').getContext('2d');
+    new Chart(ctx3, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['空中戦', 'フィジカル', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [70, 70, 80, 85, 80], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--4人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2139.jpg" alt="選手名">
+        <span class="position-badge cf">CF</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">22歳</span>
+            <span class="nation">国籍: デンマーク</span>
+            <span class="money">市場価値: 15m€</span>
+        </div>
+        <h3 class="player-name">William Osula</h3>
+        <p class="club">所属: Newcastle United/ 身長: 179cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart4"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">フィジカル</span>
+            <span class="tag">身体能力</span>
+        </div>
+        <hr>
+        <p class="description">
+            ニューカッスル所属のデンマーク代表FW。190cmを超える圧倒的なフィジカルと快速を併せ持つ大型重戦車。強烈な両足のキックと勝負強さを武器に、名門の最前線で特大の輝きを放つ新世代の怪物ストライカー。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx4 = document.getElementById('playerChart4').getContext('2d');
+    new Chart(ctx4, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['空中戦', 'フィジカル', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [75, 83, 75, 60, 55], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+<!--5人目-->
+            <article class="player-card">
+    <div class="card-image">
+        <img src="img/IMG_2140.jpg" alt="選手名">
+        <span class="position-badge cf">CF</span>
+    </div>
+    <div class="card-content">
+        <div class="player-meta">
+            <span class="age">23歳</span>
+            <span class="nation">国籍: フランス</span>
+            <span class="money">市場価値: 23m€</span>
+        </div>
+        <h3 class="player-name">Thierno Barry</h3>
+        <p class="club">所属: Everton/ 身長: 195cm</p>
+        
+        <div class="chart-container">
+            <canvas id="playerChart5"></canvas> </div>
+
+        <div class="player-tags">
+            <span class="tag">空中戦</span>
+            <span class="tag">得点感覚</span>
+        </div>
+        <hr>
+        <p class="description">
+            エヴァートンに所属するフランス出身の大型FW。195cmの恵まれた体格を活かした空中戦の強さと、高いキープ力を誇る前線の基準点。しなやかな機動力も併せ持ち、プレミアの舞台でも存在感を放つ期待のストライカー。
+        </p>
+    </div>
+</article>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 選手1人目のグラフ設定
+    const ctx5 = document.getElementById('playerChart5').getContext('2d');
+    new Chart(ctx5, {
+        type: 'radar', // レーダーチャートを指定
+        data: {
+            // 五角形の頂点の名前（CB向けのスタッツ例）
+            labels: ['空中戦', 'フィジカル', 'シュート', 'テクニック', '戦術眼'],
+            datasets: [{
+                label: '選手能力値',
+                data: [95, 80, 78, 50, 55], // 五角形のデータ（0〜100）
+                backgroundColor: 'rgba(56, 189, 248, 0.2)', // 塗りつぶしの色（ライトブルー）
+                borderColor: '#38bdf8', // 線の色
+                borderWidth: 2,
+                pointBackgroundColor: '#38bdf8'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false } // 「選手能力値」というラベルを非表示に
+            },
+            scales: {
+                r: {
+                    min: 0,   // 最小値
+                    max: 100, // 最大値
+                    ticks: { display: false, stepSize: 20 }, // 目盛りの数字を非表示
+                    grid: { color: '#334155' }, // 網目の線の色
+                    angleLines: { color: '#334155' }, // 中心から伸びる線の色
+                    pointLabels: { color: '#94a3b8', font: { size: 11 } } // 項目の文字色とサイズ
+                }
+            }
+        }
+    });
+</script>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 EURO NEXT-GEN. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
